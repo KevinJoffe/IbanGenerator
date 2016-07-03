@@ -27,8 +27,7 @@ public class IbanGeneratorMain {
 				System.out.println(iban);
 			}
 			else {
-				System.out
-						.println("Critical error occured - invalid IBAN generated.");
+				System.out.println("Unsupported country. Try again.");
 			}
 		}
 

@@ -41,8 +41,12 @@ public class IbanGenerator {
 		return randomIbanList;
 	}
 
+	public boolean isCountrySupported(String sCountryCode) {
+		return supportedCountryIbanMap.containsKey(sCountryCode);
+	}
+
 	public String generateRandomIbanForCountry(String sCountryCode) {
-		if (supportedCountryIbanMap.containsKey(sCountryCode)) {
+		if (isCountrySupported(sCountryCode)) {
 			return generateRandomIbanForCountry(supportedCountryIbanMap
 					.get(sCountryCode));
 		}
